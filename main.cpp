@@ -1,128 +1,170 @@
 #include <iostream>
+#include <cmath>
+#include <iomanip>
 // using namespace std;
 // int main () {
-//     char input;
-//     cout << "Enter traffic night color ( g/y/r); ";
-//     cin >> input;
-//     switch (input) {
-//         case 'g':
-//         case 'G':
-//             cout << "Go!" << input << endl;
-//             break;
-//         case 'y':
-//         case 'Y':
-//             cout << "Get ready" << endl;
-//             break;
-//         default:
-//             cout << "Invalid input! Please input 'g' , 'y' or 'G' or 'Y'" << endl;
 //
+// int num, positiveCount = 0, negativeCount = 0, totalCount = 0;
+// int sum = 0;
 //
+// cout << "Enter an integer, the input ends if it is 0: ";
 //
+// while (true) {
+//     cin >> num;
+//
+//     if (num == 0) {
+//         break;
 //     }
 //
-//
-//
-//     int grade;
-//     cout << " Enter student's grade (0-100); ";
-//     cin >> grade;
-//     // Validate input range
-//     if (grade < 0 || grade > 100) {
-//         cout << " Invalid grade! Please input grade (0-100);" << endl;
-//         return 1;
-//
-//     }
-//     switch (grade/10) {
-//         case 10:
-//         case 9:
-//             cout << "A" << grade << endl;
-//         case 8:
-//             cout << "B" << grade << endl;
-//         case 7:
-//             cout << "C" << grade << endl;
-//         case 6:
-//             cout << "D" << grade << endl;
-//         default:
-//             cout << "F" << endl;
-//
-//     }
-//
-//
-//
-//
-//     int angle1, angle2, angle3;
-//     cout << " Enter three angles of a triangle; ";
-//     cin >> angle1 >> angle2 >> angle3;
-//     // Check if all angles are positive and sums equal to 180
-//     if (angle1>0 && angle2>0 && angle3>0 && angle1+angle2+angle3==180) {
-//         cout << " Valid triangle." << endl;
+//     if (num > 0) {
+//         positiveCount++;
 //     } else {
-//         cout << " Invalid triangle." << endl;
-//
+//         negativeCount++;
 //     }
 //
-//         char letter;
-//         cout << "Enter a character; ";
-//         cin >> letter;
-//         // Check if it's an uppercase letter (A-Z
-//         if (letter == 'A' && letter == 'Z') {
-//             cout << "Uppercase letter!" << endl;
+//     sum += num;
+//     totalCount++;
+// }
+//
+// if (totalCount == 0) {
+//     cout << "No numbers entered except 0" << endl;
+// } else {
+//     cout << "The number of positives is " << positiveCount << endl;
+//     cout << "The number of negatives is " << negativeCount << endl;
+//     cout << "The total is " << sum << endl;
+//     cout << "The average is " << static_cast<double>(sum) / totalCount << endl;
+// }
+// int main() {
+//     int number, sum = 0;
+//     cout << "Enter a number: ";
+//     cin >> number;
+//     int temp = number;
+//     while ( temp != 0 ) {
+//         sum += temp % 10;
+//         temp = temp / 10;
+//
+//     }
+//     cout << " The sum is: "<< sum <<  endl;
+// }
+
+//     int main() {
+//         long long binary;
+//         int decimal = 0, i = 0, remainder;
+//
+//         cout << "Enter: ";
+//         cin >> binary;
+//
+//         long long temp = binary;
+//         while (temp != 0) {
+//             remainder = temp % 10;
+//             temp /= 10;
+//             decimal += remainder * pow(2, i);
+//             ++i;
 //         }
-//         // Check if it's a lowercase letter (a-z)
-//         else if (letter == 'a' && letter == 'z') {
-//             cout << "Lowercase letter!" << endl;
-//         }
-//         // in case it's not an alphabet character
-//         cout << " Enter an alphabet character! " << endl;}
+//
+//         cout << " The decimal is " << decimal << endl;
 //
 //
 //
-//     int number;
-//     // Validate that it's a three-digit number
-//     if ( number < 100 || number > 999 ) {
-//         cout << "Invalid number! Please input number (100-999)" << endl;
-//         return 1;
+//        int main () {
+//            int n;
+//
+//            cout << "Input: ";
+//            cin >> n;
+//
+//            cout << "Output: " << endl;
+//            for (int i = 0; i < n; i++) {
+//                for (int j = 0; j < n; j++) {
+//                    cout << "*";
+//                }
+//                cout << endl;
+//            }
+// int main () {
+// int n;
+//
+// cout << "Input: ";
+// cin >> n;
+//
+// cout << "Output: " << endl;
+// for (int i = 1; i <= n; i++) {
+//     for (int j = 1; j <= i; j++) {
+//         cout << "*";
 //     }
-//     // extract digits
-//     int firstDigit = number / 100; // hundreds place
-//     int secondDigit = number % 10; // units place
-//     // check if it's a palindrome ( first digit equals last digit )
-//     if (firstDigit == lastDigit) {
-//         cout << number << endl << " is a palindrome" << endl;
-//     } else {
-//         cout << number << endl << " is not a palindrome" << endl;
+//     cout << endl;
+// }
 //
-//     }
+// int main() {
+// int n;
+// cout << "Input: ";
+// cin >> n;
+// if (n == 0) {
+// cout << "Output: The depth is 0" << endl;
+//  } else {
+// cout << "Output: " << endl;
+// for (int i = 1; i <= n; i++) {
+// for (int j = 1; j <= i; j++) {
+//  cout << i;
+//  }
+//   cout << endl;
+// }
+//  }
+//
+//  int main () {
+// int number;
+// cout << "Input: ";
+// cin >> number;
+// cout << "Output: ";
+// int factor = 2;
+//      while (number > 1) {
+//          if (number % factor == 0) {
+//              cout << factor << " ";
+//              number /= factor;
+//          } else {
+//              factor++;
+//          }
+//      }
+//      cout << endl;
+//    int main (){
+//        int n = 0;
+//            int power = 1;
+//
+//            while (power * 2 < 30000) {
+//                power *= 2;
+//                n++;
+//            }
+//
+//            cout << "The largest n such that 2^n < 30,000 is: " << n << endl;
+//            cout << "2^" << n << " = " << power << endl;
+//        int main () {
+//           cout << fixed << setprecision(10);
+//
+//           for (int i = 10000; i <= 100000; i += 10000) {
+//               double pi = 0.0;
+//               for (int j = 1; j <= i; j++) {
+//                   if (j % 2 == 1) {
+//                       pi += 1.0 / (2 * j - 1);
+//                   } else {
+//                       pi -= 1.0 / (2 * j - 1);
+//                   }
+//               }
+//               pi *= 4;
+//
+//               cout << "i = " << i << ", Pi = " << pi << endl;
+//           }
+//            int main() {
+//            cout << fixed << setprecision(3);
+//            cout << "Miles\tKilometers" << endl;
+//            cout << "----------------" << endl;
+//
+//            for (int miles = 1; miles <= 10; miles++) {
+//                double kilometers = miles * 1.609;
+//                cout << miles << "\t" << kilometers << endl;
+//            }
+//      return 0;
 //
 //
 //
 //
-//         char choice;
-//         cout << "Choose a lang to greet: ";
-//         cout << "u-Uzbek" << endl;
-//         cout << "e-English" << endl;
-//         cout << "r-Russian" << endl;
-//         cout << "g-Germany" << endl;
-//         cout << "Enter your choice: ";
-//         cin >> choice;
-//         switch (choice) {
-//             case 'u':
-//             case 'U':
-//                 cout << "Xush kelibsiz!" << endl;
-//                 break;
-//             case 'e':
-//             case 'E':
-//                 cout << "Welcome!" << endl;
-//                 break;
-//             case 'r':
-//             case 'R':
-//                 cout << "Добро пожаловать!" << endl;
-//                 break;
-//             case 'g':
-//             case 'G':
-//                 cout << " Willkommen! " << endl;
-//                 break;
-//             default:
-//                 cout << "invalid choice! Using English as default: Hello! Welcome!" << endl;
-//         }
-//         return 0;
-//     }
+//
+//
+// }
